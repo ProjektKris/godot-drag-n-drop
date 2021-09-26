@@ -11,14 +11,16 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if dragging:
 		var mousepos = get_viewport().get_mouse_position()
 		self.position = Vector2(mousepos.x, mousepos.y)
-		pass
+		if Input.is_action_just_released("drag"): # reqires drag input map
+			dragging = false
+	pass
 
 func _set_drag_pc():
-	dragging = !dragging
+	dragging = true
 
 func _on_KinematicBody2D_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
