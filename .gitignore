@@ -1,6 +1,8 @@
 # Import cache
 .import/
 
+.mono/
+
 # Binaries
 bin/
 build/
