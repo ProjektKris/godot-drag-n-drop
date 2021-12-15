@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/draggable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/block.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/draggable_phys.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/draggable_body.tscn" type="PackedScene" id=3]
 
 [node name="Node2D" type="Node2D"]
 
@@ -12,5 +12,5 @@ position = Vector2( 500.161, 613.028 )
 [node name="Draggable" parent="." instance=ExtResource( 1 )]
 position = Vector2( 377.336, 428.201 )
 
-[node name="RigidBody2D" parent="." instance=ExtResource( 3 )]
-position = Vector2( 724.584, 377.065 )
+[node name="DraggableBody" parent="." instance=ExtResource( 3 )]
+position = Vector2( 533, 452 )
