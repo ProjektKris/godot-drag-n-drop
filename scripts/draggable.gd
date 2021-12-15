@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Area2D
 
 # true if the current node is being dragged
 var dragging := false
