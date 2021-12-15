@@ -8,6 +8,7 @@ var dragging := false
 
 # dont set this too low or the object will be late behind the mouse 
 export var drag_velocity_multiplier := 16
+export var throwable := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,6 +30,8 @@ func _process(_delta):
 		self.linear_velocity = lv
 		if Input.is_action_just_released("drag"): # reqires drag input map
 			dragging = false
+			if !throwable:
+				self.linear_velocity = Vector2(0, 0)
 	pass
 
 func _on_dragging():
